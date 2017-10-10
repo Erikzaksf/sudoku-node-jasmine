@@ -5,7 +5,7 @@ module.exports = function(config) {
   config.set({
 
     // base path that will be used to resolve all patterns (eg. files, exclude)
-    basePath: '',
+    basePath: './',
 
 
     // frameworks to use
@@ -30,6 +30,7 @@ module.exports = function(config) {
     preprocessors: {
       'js/*.js' : ['browserify'],
       'spec/*.js': ['browserify'],
+      './build/js/*.js': ['coverage']
     },
     plugins: [
       'karma-jquery',
@@ -37,13 +38,25 @@ module.exports = function(config) {
       'karma-jasmine',
       'karma-chrome-launcher',
       'karma-jasmine-html-reporter',
+      'karma-coverage'
     ],
-
+    browserify: {
+     transform: [
+       [
+         istanbul({
+         ignore: ["node_modules/**", "**/*.spec.js"],
+         includeUntested: false,
+         defaultIgnore: true
+         }),
+         { global: true }
+       ]
+     ]
+   },
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
     // available reporters: https://npmjs.org/browse/keyword/karma-reporter
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'kjhtml','coverage'],
 
 
     // web server port
