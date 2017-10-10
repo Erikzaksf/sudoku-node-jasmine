@@ -16,7 +16,11 @@ This web application allows users to check if their completed Sudoku puzzle is "
   * Example input: [2,5,1,5,4,7,9,6,8]
   * Example output: false
 * Will return false if single column contains numbers with repeats.
-
+  * Example input: [2,5,1,5,4,7,9,6,8]
+  * Example output: false
+* Will return true if single column contains numbers 1-9 with no repeats.
+  * Example input: [2,3,1,5,4,7,9,6,8]
+  * Example output: true
 
 
 ## Setup/Installation Requirements
