@@ -18,7 +18,7 @@ SudokuChecker.prototype.validColumn = function(array) {
   for(i = 0; i < 9; i++){
     column.push(myArray[i][0])
   }
-  for(i = 0; i <= column.length; i++) {
+  for(i = 1; i <= column.length; i++) {
     if (!column.includes(i)) {
       return false;
     }

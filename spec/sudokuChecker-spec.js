@@ -29,5 +29,18 @@ describe("SudokuChecker", function(){
     expect(testChecker.validColumn(myArray)).toEqual(false);
 
   });
+  it('will return true if a single column contains numbers 1-9 with no repeats', function() {
+    var row1 = [1,2,3,4,5,6,7,8,9];
+    var row2 = [2,2,3,4,5,6,7,8,9];
+    var row3 = [3,2,3,4,5,6,7,8,9];
+    var row4 = [4,2,3,4,5,6,7,8,9];
+    var row5 = [5,2,3,4,5,6,7,8,9];
+    var row6 = [6,2,3,4,5,6,7,8,9];
+    var row7 = [7,2,3,4,5,6,7,8,9];
+    var row8 = [8,2,3,4,5,6,7,8,9];
+    var row9 = [9,2,3,4,5,6,7,8,9];
+    var myArray = [row1,row2,row3,row4,row5,row6,row7,row8,row9]
+    expect(testChecker.validColumn(myArray)).toEqual(true);
+  });
 
 });
