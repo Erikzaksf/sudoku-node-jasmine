@@ -25,7 +25,8 @@ describe("SudokuChecker", function(){
     var row7 = [1,2,3,4,5,6,7,8,9];
     var row8 = [1,2,3,4,5,6,7,8,9];
     var row9 = [1,2,3,4,5,6,7,8,9];
-    expect(testChecker.validColumn(row1,row2,row3,row4,row5,row6,row7,row8,row9)).toEqual(false);
+    var myArray = [row1,row2,row3,row4,row5,row6,row7,row8,row9]
+    expect(testChecker.validColumn(myArray)).toEqual(false);
 
   });
 
