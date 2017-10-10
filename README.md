@@ -9,7 +9,9 @@
 This web application allows users to check if their completed Sudoku puzzle is "legal".
 
 ## Specifications
-*
+* Will return true if single row contains numbers 1-9 with no repeats.
+  * Example input: [2,3,1,5,4,7,9,6,8]
+  * Example output: true
 
 
 
