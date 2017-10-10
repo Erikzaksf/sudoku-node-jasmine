@@ -1,6 +1,6 @@
 // Karma configuration
 // Generated on Tue Oct 10 2017 08:46:17 GMT-0700 (PDT)
-
+var istanbul = require("browserify-istanbul");
 module.exports = function(config) {
   config.set({
 
